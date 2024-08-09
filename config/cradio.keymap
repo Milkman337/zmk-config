@@ -10,6 +10,32 @@
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
 / {
+    macros {
+        one: one {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp RALT &kp N7>;
+        };
+
+        two: two {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp RALT &kp N0>;
+        };
+
+        three: three {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp RALT &kp N8>;
+        };
+
+        four: four {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp RALT &kp N9>;
+        };
+    };
+
     behaviors {
         ht: hold_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -39,12 +65,12 @@
             &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
-            HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        SQT)
+            &kp A      &kp S     &mt LALT D &mt LCTRL F &kp G          &kp H     &mt RCTRL J &mt RALT K %kp L     SEMI 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+           &mt LSHFT Z  &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT  &mt RSHFT FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 BSPC
+                                           &mt LGUI NUBS &lt 1 BSPC   &lt 2 SPACE  &mt LGUI TAB
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
