@@ -12,6 +12,7 @@
 &lt {
     tapping-term-ms = <200>;
     quick-tap-ms = <150>;
+    flavor = "tap-preferred";
 };
 
 
@@ -55,6 +56,7 @@
         lt: layer_tap {
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
+            flavor = "tap-preferred";
         };
     };
 
