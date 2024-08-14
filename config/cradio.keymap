@@ -84,7 +84,7 @@
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
            &mt LSHFT Z  &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT  &mt RSHFT FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &mt LGUI NUBS &lt 1 BSPC   &lt 2 SPACE  &mt LGUI TAB
+                                           &mt LGUI NUBS &lt 3 BSPC   &lt 2 SPACE  &mt LGUI TAB
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
